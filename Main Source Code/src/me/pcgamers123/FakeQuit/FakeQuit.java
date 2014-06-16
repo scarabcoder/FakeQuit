@@ -29,7 +29,11 @@ public class FakeQuit extends JavaPlugin implements Listener{
 		Player player = (Player) sender;
 		
 	if(label.equalsIgnoreCase("fakejoin")){
-		String fakejoin = ((String) getConfig().get("FakeJoinMessage")).replaceAll("%e", ChatColor.YELLOW + "").replaceAll("player", player.getName() + "").replaceAll("%a", ChatColor.GREEN + "").replaceAll("%d", ChatColor.LIGHT_PURPLE + "").replaceAll("%c", ChatColor.RED + "").replaceAll("%g", ChatColor.GOLD + "").replaceAll("%b", ChatColor.DARK_RED + "").replaceAll("%q", ChatColor.AQUA + "").replaceAll("%b", ChatColor.BLACK + "").replaceAll("%r", ChatColor.GRAY + "").replaceAll("%u", ChatColor.BLUE + "").replaceAll("%w", ChatColor.WHITE + "").replaceAll("%s", ChatColor.DARK_BLUE + "").replaceAll("%p", ChatColor.DARK_GREEN + "").replaceAll("%x", ChatColor.DARK_AQUA + "").replaceAll("%o", ChatColor.DARK_PURPLE + "").replaceAll("%h", ChatColor.DARK_GRAY + "");
+		String fakejoin = ((String) getConfig().get("FakeJoinMessage")).replaceAll("%e", ChatColor.YELLOW + "").replaceAll("player", player.getName() + "")
+				.replaceAll("%a", ChatColor.GREEN + "").replaceAll("%d", ChatColor.LIGHT_PURPLE + "").replaceAll("%c", ChatColor.RED + "").replaceAll("%g", ChatColor.GOLD + "")
+				.replaceAll("%b", ChatColor.DARK_RED + "").replaceAll("%q", ChatColor.AQUA + "").replaceAll("%b", ChatColor.BLACK + "").replaceAll("%r", ChatColor.GRAY + "")
+				.replaceAll("%u", ChatColor.BLUE + "").replaceAll("%w", ChatColor.WHITE + "").replaceAll("%s", ChatColor.DARK_BLUE + "").replaceAll("%p", ChatColor.DARK_GREEN + "")
+				.replaceAll("%x", ChatColor.DARK_AQUA + "").replaceAll("%o", ChatColor.DARK_PURPLE + "").replaceAll("%h", ChatColor.DARK_GRAY + "");
 			if(sender.hasPermission("fakequit.join")){
 				Bukkit.broadcastMessage(fakejoin);
 				
@@ -42,7 +46,11 @@ public class FakeQuit extends JavaPlugin implements Listener{
 	
 
     if(label.equalsIgnoreCase("fakeleave")){			
-		String fakeleave = ((String) getConfig().get("FakeLeaveMessage")).replaceAll("%e", ChatColor.YELLOW + "").replaceAll("player", player.getName() + "").replaceAll("%a", ChatColor.GREEN + "").replaceAll("%d", ChatColor.LIGHT_PURPLE + "").replaceAll("%c", ChatColor.RED + "").replaceAll("%g", ChatColor.GOLD + "").replaceAll("%b", ChatColor.DARK_RED + "").replaceAll("%q", ChatColor.AQUA + "").replaceAll("%b", ChatColor.BLACK + "").replaceAll("%r", ChatColor.GRAY + "").replaceAll("%u", ChatColor.BLUE + "").replaceAll("%w", ChatColor.WHITE + "").replaceAll("%s", ChatColor.DARK_BLUE + "").replaceAll("%p", ChatColor.DARK_GREEN + "").replaceAll("%x", ChatColor.DARK_AQUA + "").replaceAll("%o", ChatColor.DARK_PURPLE + "").replaceAll("%h", ChatColor.DARK_GRAY + "");
+		String fakeleave = ((String) getConfig().get("FakeLeaveMessage")).replaceAll("%e", ChatColor.YELLOW + "").replaceAll("player", player.getName() + "")
+				.replaceAll("%a", ChatColor.GREEN + "").replaceAll("%d", ChatColor.LIGHT_PURPLE + "").replaceAll("%c", ChatColor.RED + "").replaceAll("%g", ChatColor.GOLD + "")
+				.replaceAll("%b", ChatColor.DARK_RED + "").replaceAll("%q", ChatColor.AQUA + "").replaceAll("%b", ChatColor.BLACK + "").replaceAll("%r", ChatColor.GRAY + "")
+				.replaceAll("%u", ChatColor.BLUE + "").replaceAll("%w", ChatColor.WHITE + "").replaceAll("%s", ChatColor.DARK_BLUE + "").replaceAll("%p", ChatColor.DARK_GREEN + "")
+				.replaceAll("%x", ChatColor.DARK_AQUA + "").replaceAll("%o", ChatColor.DARK_PURPLE + "").replaceAll("%h", ChatColor.DARK_GRAY + "");
 	    		if(player.hasPermission("fakequit.leave")){
 					Bukkit.broadcastMessage(fakeleave);
 				}
